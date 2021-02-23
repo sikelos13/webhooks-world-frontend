@@ -4,8 +4,8 @@ import { createMuiTheme } from '@material-ui/core/styles';
 export const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#ff3e3e',
-      dark: '#ffadad'
+      main: '#334747',
+      dark: '#abd0ed'
     },
     secondary: {
       main: '#fff',
@@ -23,11 +23,6 @@ export const theme = createMuiTheme({
           color: '#ffffff',
         },
       },
-      MuiTableHead: {
-        root: {
-          backgroundColor: '#ffe6e6',
-        }
-      }
     }
 });
 

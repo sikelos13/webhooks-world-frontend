@@ -18,8 +18,8 @@ export interface CreateWebhookApiResponse {
  * @returns Promise<CreateWebhookApiResponse>
  */
 
-export const createWebhook = (): Promise<CreateWebhookApiResponse> => (
-    axios.post(`${process.env.REACT_APP_API_ENDPOINT}webhooks/new/`)
+export const createWebhook = (email_address: string): Promise<CreateWebhookApiResponse> => (
+    axios.post(`${process.env.REACT_APP_API_ENDPOINT}webhooks/new/`, JSON.stringify({email: email_address}))
         .then((response: any) => {
             return {
                 ...response,
