@@ -1,21 +1,12 @@
 import React from "react";
-import { History } from "history";
-import { Router } from 'react-router-dom';
+import { BrowserRouter as Router } from "react-router-dom";
 import './App.scss';
-import Routes from './Routes';
+import { Routes } from './Routes';
 import { Toaster } from 'react-hot-toast';
 
-interface OwnProps {
-    history: History;
-}
-
-class App extends React.Component<OwnProps,{}> {
-
-    public render() {
-        const { history } = this.props;
-
+export function App () {
         return (
-          <Router history={history}>
+          <Router>
               <Toaster 
                 position="top-center"
                 reverseOrder={false}
@@ -23,7 +14,7 @@ class App extends React.Component<OwnProps,{}> {
                 <Routes />
           </Router>
         );
-    }
+
 }
 
 export default App;

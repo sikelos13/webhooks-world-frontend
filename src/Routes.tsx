@@ -1,16 +1,11 @@
-import { Component } from 'react'
-import { Route, Switch } from 'react-router-dom';
 import WebhooksRegistrations from './containers/WebhooksRegistrations';
 import { Container } from '@material-ui/core';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-export default class Routes extends Component<{}, {}> {
-    render() {
-        return (
-            <Container className="Main_Container">                     
-                <Switch>
-                    <Route exact path={["/register", "/"]} component={WebhooksRegistrations} />
-                </Switch>
-            </Container>
-        );
-    }
+export function Routes () {
+    return (
+        <Container className="Main_Container">                     
+                <Route exact path={["/register", "/"]} component={WebhooksRegistrations} />
+        </Container>
+    );
 }
